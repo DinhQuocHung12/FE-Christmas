@@ -1,0 +1,94 @@
+.responsive{
+    width: 100%;
+    height: auto;
+}
+
+.text-sale{
+    font-family: sans-serif;
+    position: absolute;
+    top: 35%;
+    padding-left: 37%;
+}
+
+.button1{
+    text-align: center;
+    position: absolute;
+    top: 45%;
+    padding-left: 43%;
+}
+
+/* Giấu text và button cho điện thoại */
+@media(max-width: 576px){
+    .responsive{
+        max-width: 400px;
+    }
+    .button1{
+        display: none;
+    }
+    .hide1{
+        display: none;
+    }
+}
+
+/* Giấu text và button cho ipad */
+@media(max-width: 992px){
+    .button1{
+        display: none;
+    }
+    .hide1{
+        display: none;
+    }
+}
+
+.about{
+    width: 745px;
+    height: 526px;
+}
+
+.buttonrm{
+    margin-left: 40%;
+}
+
+@media (max-width: 576px){
+    .about{
+        max-width: 100%;
+    }
+    .buttonrm{
+        margin-left: 35%;
+    }
+}
+
+.icon-tree{
+    margin-left: 16%;
+}
+
+.icon-cookie{
+    margin-left: 20%;
+}
+
+.icon-gift{
+    margin-left: 16%;
+}
+
+.buttonATC{
+    display: block;
+    margin: auto;
+}
+/* login */
+.forgotpassword{
+    margin-left: 52%;
+}
+
+@media screen and (max-width: 576px) {
+    .forgotpassword {
+        display: inline-block;
+        padding-left: 22%;
+    }
+  }
+  
+
+@media (max-width:992px) {
+    .forgotpassword{
+        margin-left: 43%;
+    }
+}

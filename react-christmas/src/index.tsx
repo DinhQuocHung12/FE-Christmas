@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client';
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import './index.css';
+import Button from 'react-bootstrap/Button';
+import { BrowserRouter as Router, Routes ,Route } from 'react-router-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 

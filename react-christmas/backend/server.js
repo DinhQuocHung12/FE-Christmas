@@ -9,12 +9,12 @@ app.use(express.json());
 const db = mysql.createConnection({
     host:"localhost",
     user:"root",
-    password:"12312312345",
+    password:"",
     database:"store_christmas"
 })
 
 app.post('/register', (req,res) =>{
-    const sql = "INSERT INTO login (`name`,`email`,`password`) values(?)";
+    const sql = "INSERT INTO login (`name`,`email`,`password`) VALUES (?)";
     const values =[
         req.body.name,
         req.body.email,

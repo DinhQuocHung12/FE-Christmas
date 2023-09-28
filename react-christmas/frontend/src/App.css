@@ -132,3 +132,19 @@
       margin-left: 43%;
   }
 }
+
+/* allproducts */
+.imgallproducts{
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+  background-color: aquamarine;
+}
+
+.buttonAdd{
+  display: block;
+  margin-block-start: 30%;
+  margin-left: 46%;
+  align-items: center;
+  justify-content: center;
+}

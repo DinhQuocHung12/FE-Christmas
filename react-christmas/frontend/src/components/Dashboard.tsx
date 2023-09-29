@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import {Nav} from "react-bootstrap";
 
 function Dashboard() {
   return (
@@ -13,36 +14,13 @@ function Dashboard() {
         <div className="offcanvas-body px-0">
         <ul className="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start" id="menu">
             <li className="nav-item">
-            <a href="/" className="nav-link text-truncate">
-                <Link to={"/"}></Link>
-                <i className="fs-5 bi-house" /><span className="ms-1 d-none d-sm-inline">Home</span>
-            </a>
+            <Nav.Link as={Link} to={"/"} ><i className="fs-5 bi-house" />Home</Nav.Link>
             </li>
             <li>
-            <a href="#submenu1" data-bs-toggle="collapse" className="nav-link text-truncate">
-                <i className="fs-5 bi-speedometer2" /><span className="ms-1 d-none d-sm-inline">Dashboard</span> </a>
+            <Nav.Link as={Link} to={"/products"} ><i className="fs-5 bi-table" />Order</Nav.Link>
             </li>
             <li>
-            <a href="#" className="nav-link text-truncate">
-                <i className="fs-5 bi-table" /><span className="ms-1 d-none d-sm-inline">Orders</span></a>
-            </li>
-            <li className="dropdown">
-            <a href="#" className="nav-link dropdown-toggle  text-truncate" id="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                <i className="fs-5 bi-bootstrap" /><span className="ms-1 d-none d-sm-inline">Bootstrap</span>
-            </a>
-            <ul className="dropdown-menu text-small shadow" aria-labelledby="dropdown">
-                <li><a className="dropdown-item" href="#">New project...</a></li>
-                <li><a className="dropdown-item" href="#">Settings</a></li>
-                <li><a className="dropdown-item" href="#">Profile</a></li>
-                <li>
-                <hr className="dropdown-divider" />
-                </li>
-                <li><a className="dropdown-item" href="#">Sign out</a></li>
-            </ul>
-            </li>
-            <li>
-            <a href="#" className="nav-link text-truncate">
-                <i className="fs-5 bi-grid" /><span className="ms-1 d-none d-sm-inline">Products</span></a>
+            <Nav.Link as={Link} to={"/allproducts"} ><i className="fs-5 bi-grid" />Products</Nav.Link>
             </li>
             <li>
             <a href="#" className="nav-link text-truncate">
@@ -58,7 +36,7 @@ function Dashboard() {
             <button className="btn float-end" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" role="button">
             <i className="bi bi-arrow-right-square-fill fs-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" />
             </button>
-            Content..
+            Admin Page
         </div>
         </div>
     </div>

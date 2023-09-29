@@ -101,5 +101,5 @@ app.get("/allproducts", (req,res)=>{
 })
 
 app.listen(3001,() =>{
-    console.log("listening");
+    console.log("Sever backend đang hoạt động");
 })

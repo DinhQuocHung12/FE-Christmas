@@ -61,8 +61,6 @@ function Login() {
               <label htmlFor="password" className="form-label">Password</label>
               <input type="password" name="password" className="form-control" onChange={handleInput} />
               {errors.password && <span className='text-danger'>{errors.password}</span>}
-              <input type="checkbox" id="password" defaultChecked />
-              <label htmlFor="forgotpassword">Remember me</label>
               <a href="/#" className="forgotpassword">Forgot password?</a>
             </div>
           </div>

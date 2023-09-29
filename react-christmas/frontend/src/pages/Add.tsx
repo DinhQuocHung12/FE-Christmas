@@ -1,36 +1,43 @@
-import React, {useState} from 'react'
+import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
+interface Product {
+  title: string;
+  description: string;
+  price: number | null;
+  cover: string;
+}
 
-const Add = () => {
-  const [products,setProducts] = useState({
-    title:"",
-    description:"",
-    price:null,
-    cover:"",
+const Add: React.FC = () => {
+  const [products, setProducts] = useState<Product>({
+    title: "",
+    description: "",
+    price: null,
+    cover: "",
   });
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
-  const handleChange = (e) =>{
-    setProducts(prev=>({...prev,[e.target.name]: e.target.value}));
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setProducts(prev => ({ ...prev, [e.target.name]: e.target.value }));
   };
+
   console.log(products);
 
-  const handleClick = async e =>{
-    e.preventDefault()
-    try{
-      await axios.post("http://localhost:3001/allproducts", products)
-      navigate("/")
-    } catch(err){
+  const handleClick = async (e: FormEvent) => {
+    e.preventDefault();
+    try {
+      await axios.post("http://localhost:3001/allproducts", products);
+      navigate("/");
+    } catch (err) {
       console.log(err);
     }
-  }
-  
+  };
+
   return (
     <form className="form1">
-      <h1>Add Products</h1>
+      <h1 className='text-center mt-5'>Add Products</h1>
       <div className="container position-absolute top-50 start-50 translate-middle">
         <div className="row justify-content-center align-content-center mb-3">
           <div className="col-xl-6">
@@ -67,20 +74,13 @@ const Add = () => {
         </div>
         <div className="row justify-content-center align-content-center mb-3">
           <div className="col-xl-6">
-            <div className="input-group mb-3">
-              <label className="input-group-text" htmlFor="inputGroupFile01">
-                Upload Images
-              </label>
-              <input type="file" className="form-control" id="inputGroupFile01" onChange={handleChange}
-              name="cover"/>
-            </div>
-            {/* <input
+            <input
               type="text"
-              placeholder="cover"
+              placeholder="Images"
               className="form-control"
               onChange={handleChange}
               name="cover"
-            /> */}
+            />
           </div>
         </div>
       </div>
@@ -89,6 +89,6 @@ const Add = () => {
       </button>
     </form>
   );
-}
+};
 
 export default Add;

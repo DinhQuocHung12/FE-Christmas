@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
@@ -10,7 +11,7 @@ function Home() {
       <p className="hide1 fs-2 fw-bold">HOLIDAY SALE 30%</p>
     </div>
     <div className="button1">
-      <button className="btn btn-danger"> SHOP NOW</button>
+    <Link to={`/products`}><button className="btn btn-danger"> SHOP NOW</button></Link>
     </div>
   </nav>
   {/* 6 bức ảnh về giáng sinh */}

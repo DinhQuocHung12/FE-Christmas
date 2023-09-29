@@ -33,6 +33,7 @@ function App() {
         <Route path='/dashboard' element={<Dashboard/>}/>
         <Route path='/allproducts' element={<Allproducts/>}/>
         <Route path='/add' element={<Add/>}/>
+        <Route path='/update/' element={<Update/>}/>
         <Route path='/update/:idproducts' element={<Update/>}/>
       </Routes>
     </Router>

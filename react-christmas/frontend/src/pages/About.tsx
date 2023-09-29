@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 function About() {
   return (
@@ -15,7 +16,8 @@ function About() {
         <p>Christmas is an annual festival celebrating the birth of Jesus. There are many things that people can do during this holiday, such as decorating houses, gathering with family and friends, exchanging presents, etc. I love Christmas because I can receive many lovely gifts.
           May this gift remind you of how special you are to me.
         </p>
-        <button className="btn btn-danger buttonrm" type="submit">Read More</button>
+       
+        <Link to={`/gallery`}><button className="btn btn-danger buttonrm" type="submit">Read More</button></Link>
         <div className="container">
           <div className="row mt-5">
             <div className="col-4" style={{backgroundColor: 'rgb(238, 238, 238)'}}>
